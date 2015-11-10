@@ -1,0 +1,16 @@
+#!/bin/bash
+# run the program
+shel >& out.run
+# create an output directory
+mkdir runout
+# store the files there
+mv output* runout
+# copy the print to screen file to runout
+cp out.run runout
+# go into the directory
+cd runout
+# assess the files
+ls -l output* out.run > summary
+# compress the data
+gzip output* 
+echo 'done' 

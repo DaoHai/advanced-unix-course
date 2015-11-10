@@ -1,0 +1,7 @@
+set terminal gif 
+set output "output.gif"
+set title "Energy vs Time for Sample Data"
+set xlabel "Time"
+set ylabel "Energy"
+plot "input.dat" with lines
+pause -1 "Hit any key to continue" 

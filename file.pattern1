@@ -1,0 +1,4 @@
+BEGIN { print "Beginning to analyse it" }
+$3 == 0.040302 { print $3, $2, $1 }
+$3 == 0.040302 { print $1 }
+END { print "Finished analysing the file" }

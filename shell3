@@ -1,0 +1,39 @@
+#!/bin/bash
+# run the program
+shell >& out.run$1
+# create an output directory
+mkdir runout$1
+# store the files there
+mv output* runout$1
+
+#----------------------------
+# plot the data
+cp runout$1/output1.dat input.dat
+gnuplot fileinst2
+cp output.ps output1.ps
+
+# plot the data
+cp runout$1/output2.dat input.dat
+gnuplot fileinst2
+cp output.ps output2.ps
+
+# plot the data
+cp runout$1/output3.dat input.dat
+gnuplot fileinst2
+cp output.ps output3.ps
+
+# plot the data
+cp runout$1/output4.dat input.dat
+gnuplot fileinst2
+cp output.ps output4.ps
+#----------------------------
+
+# copy the print to screen file to runout
+cp out.run runout$1
+# go into the directory
+cd runout$1
+# assess the files
+ls -l output* out.run$1 > summary
+# compress the data
+gzip output* 
+echo 'done' 

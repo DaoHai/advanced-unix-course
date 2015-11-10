@@ -1,0 +1,11 @@
+BEGIN{"Start running"} 
+{	
+count=4
+for(x=1; x<=count; ++x) {
+elem[x]=$x
+print x,$x
+}
+print "elements 2 and 4 are =",elem[2],elem[4]
+}
+END{"Finished running the script"}
+

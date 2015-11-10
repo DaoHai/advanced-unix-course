@@ -1,0 +1,6 @@
+#!/bin/bash
+if grep 0.4 d1.dat
+  then
+  echo "I found 0.4 in d1.dat"
+fi
+

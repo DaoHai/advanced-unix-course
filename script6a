@@ -1,0 +1,16 @@
+#! /bin/bash
+var="STEVE"
+str0="STEVE"
+str1="ST"
+case $var in
+        $str0)
+                echo "got here 0"
+;;
+        $str1)
+                echo "got here 1"
+;;
+        *)
+                echo "got here else"
+;;
+esac
+

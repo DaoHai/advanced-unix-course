@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ 3 -gt 2 ]
+  then
+  echo "Integer example"
+else
+  echo "It was not true"
+fi
+

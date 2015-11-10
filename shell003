@@ -1,0 +1,24 @@
+#!/bin/bash
+rm -f rtoutput 
+mkdir rtrunoutput
+for ref in 10 20 30 40 50;
+do
+ for auo in 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1;
+ do 
+  echo $ref > inputrt
+  echo $auo >> inputrt
+  ./rtcode < inputrt
+  rm -f inputrt
+ done
+done
+mv rtoutput rtrunoutput
+cd rtrunoutput
+gzip rtoutput
+gunzip rtoutput
+
+awk '$2> 0.99 && $2 < 1.01 {print $3 $4}' rtoutput > outplot.dat
+
+cp ../fileinst . 
+cp outplot.dat input.dat
+gnuplot fileinst
+

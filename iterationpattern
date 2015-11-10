@@ -1,0 +1,2 @@
+awk '$4 < 1.04400E-03{print $2, $4}' iteration2> iteration3
+

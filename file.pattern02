@@ -1,0 +1,4 @@
+BEGIN { print "Beginning to analyse the file"}
+{ for (i=1; i <= 3; i++){ print $i }}
+END { print "Finished analysing the file"}
+

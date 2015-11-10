@@ -1,0 +1,12 @@
+#! /bin/bash
+var="STEVE"
+str0="STEVE"
+while [ $var=$str0 ]
+do
+  if [ -r "filename10" ]
+  then
+   exit
+  fi
+  echo "still running"
+done
+

@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+a.out >& out.run$1
+mkdir runout$2
+cp output* runout$2
+echo 'done' 
